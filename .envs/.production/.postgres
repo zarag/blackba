@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=blackdb
+POSTGRES_USER=blackdb_admin
+POSTGRES_PASSWORD=DdeQ5kV4W9zw
