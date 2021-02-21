@@ -5,15 +5,10 @@ from django.contrib.messages.middleware import MessageMiddleware
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.http.response import Http404
 from django.test import RequestFactory
-
-from black.users.forms import UserChangeForm
-from black.users.models import User
-from black.users.tests.factories import UserFactory
-from black.users.views import (
-    UserRedirectView,
-    UserUpdateView,
-    user_detail_view,
-)
+from users.forms import UserChangeForm
+from users.models import User
+from users.tests.factories import UserFactory
+from users.views import UserRedirectView, UserUpdateView, user_detail_view
 
 pytestmark = pytest.mark.django_db
 
