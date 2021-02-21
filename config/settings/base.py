@@ -303,5 +303,4 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 # Your stuff...
 # ------------------------------------------------------------------------------
 STATIC_URL = "/static/"
-
-STATIC_ROOT = os.path.join(APPS_DIR, "static/")
+STATIC_ROOT = os.path.join(APPS_DIR, "assets/")
