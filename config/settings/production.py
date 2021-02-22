@@ -1,5 +1,14 @@
+from pathlib import Path
+
+import environ
+
 from .base import *  # noqa
-from .base import env
+
+ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+# black/
+APPS_DIR = ROOT_DIR / "black"
+env = environ.Env()
+env.read_env(str(APPS_DIR / ".env"))
 
 # GENERAL
 DEBUG = False
@@ -132,7 +141,7 @@ ADMIN_URL = env("DJANGO_ADMIN_URL")
 # Collectfast
 # ------------------------------------------------------------------------------
 # https://github.com/antonagestam/collectfast#installation
-INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
+# INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
 
 # LOGGING
 # ------------------------------------------------------------------------------
