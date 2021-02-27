@@ -148,6 +148,8 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
+
 # MEDIA
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-root
