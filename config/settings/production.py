@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import environ
+import os
 
 from .base import *  # noqa
 
@@ -183,4 +184,6 @@ LOGGING = {
 }
 
 # Your stuff...
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(APPS_DIR, 'static/')
 # ------------------------------------------------------------------------------
