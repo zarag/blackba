@@ -1,0 +1,16 @@
+/* line 20, black/assets/sass/project.scss */
+body {
+  background-color: #000 !important;
+  color: #fff; }
+
+/* line 32, black/assets/sass/project.scss */
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+/* line 38, black/assets/sass/project.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }

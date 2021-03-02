@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Coupon List</h1>
+  {% if coupon_list %}
+  <ul>
+    {% for coupon in coupon_list %}
+      <li>
+        <a>{{ coupon.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}

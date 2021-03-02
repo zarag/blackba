@@ -32,6 +32,7 @@ EMAIL_BACKEND = env(
 )
 EMAIL_HOST = "mail.black.ba"
 EMAIL_HOST_USER = "noreply@black.ba"
+EMAIL_HOST_PASSWORD = env("DJANGO_EMAIL_PASSWORD")
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
