@@ -2,7 +2,10 @@ from django.db import models
 from django.utils import timezone
 from partners.models import Partner
 from tinymce.models import HTMLField
-from versatileimagefield.fields import VersatileImageField
+
+
+class Image(models.Model):
+    image = models.ImageField()
 
 
 class Coupon(models.Model):
@@ -11,4 +14,4 @@ class Coupon(models.Model):
     start_time = models.DateTimeField(default=timezone.now)
     end_time = models.DateTimeField(default=timezone.now)
     description = HTMLField()
-    photo = VersatileImageField(upload_to="coupon-avatars", blank=True, null=True)
+    photos = models.ManyToManyField(Image)

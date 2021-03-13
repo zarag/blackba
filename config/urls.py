@@ -1,16 +1,10 @@
-from coupons.models import Coupon
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
-from django.views import generic
 from django.views.generic import TemplateView
-
-
-class HomeView(generic.ListView):
-    model = Coupon
-
+from home.views import HomeView
 
 urlpatterns = [
     # path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -24,6 +18,7 @@ urlpatterns = [
     path("users/", include("users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path("tinymce/", include("tinymce.urls")),
+    path("coupons/", include("coupons.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
