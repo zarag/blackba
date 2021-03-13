@@ -1,0 +1,28 @@
+/* line 20, black/static/sass/project.scss */
+body {
+  background-color: #000 !important;
+  color: #fff; }
+
+/* line 25, black/static/sass/project.scss */
+.card-header {
+  color: #000; }
+
+/* line 31, black/static/sass/project.scss */
+.carousel .carousel-inner {
+  width: 350px;
+  height: 250px; }
+  /* line 35, black/static/sass/project.scss */
+  .carousel .carousel-inner .carousel-item {
+    object-fit: contain; }
+
+/* line 47, black/static/sass/project.scss */
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+/* line 53, black/static/sass/project.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }

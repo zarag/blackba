@@ -1,0 +1,81 @@
+/* line 20, black/static/sass/project.scss */
+body {
+  background-color: #000 !important;
+  color: #fff; }
+
+/* line 25, black/static/sass/project.scss */
+.card-header {
+  color: #000; }
+
+/* line 29, black/static/sass/project.scss */
+.carousel {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: white;
+  z-index: 10; }
+  /* line 39, black/static/sass/project.scss */
+  .carousel .ribbon1 {
+    position: absolute;
+    top: -6.1px;
+    right: 10px; }
+  /* line 44, black/static/sass/project.scss */
+  .carousel .ribbon1:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 53px solid transparent;
+    border-right: 53px solid transparent;
+    border-top: 10px solid #F8463F; }
+  /* line 53, black/static/sass/project.scss */
+  .carousel .ribbon1 span {
+    position: relative;
+    display: block;
+    text-align: center;
+    background: #F8463F;
+    font-size: 14px;
+    line-height: 1;
+    padding: 12px 8px 10px;
+    border-top-right-radius: 8px;
+    width: 90px; }
+  /* line 64, black/static/sass/project.scss */
+  .carousel .ribbon1 span:before, .carousel .ribbon1 span:after {
+    position: absolute;
+    content: ""; }
+  /* line 68, black/static/sass/project.scss */
+  .carousel .ribbon1 span:before {
+    height: 6px;
+    width: 6px;
+    left: -6px;
+    top: 0;
+    background: #F8463F; }
+  /* line 75, black/static/sass/project.scss */
+  .carousel .ribbon1 span:after {
+    height: 6px;
+    width: 8px;
+    left: -8px;
+    top: 0;
+    border-radius: 8px 8px 0 0;
+    background: #C02031; }
+  /* line 84, black/static/sass/project.scss */
+  .carousel .carousel-inner {
+    width: 350px;
+    height: 250px; }
+    /* line 88, black/static/sass/project.scss */
+    .carousel .carousel-inner .carousel-item {
+      object-fit: contain; }
+
+/* line 100, black/static/sass/project.scss */
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+/* line 106, black/static/sass/project.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }

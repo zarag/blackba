@@ -1,0 +1,70 @@
+/* line 20, black/static/sass/project.scss */
+body {
+  background-color: #000 !important;
+  color: #fff; }
+
+/* line 25, black/static/sass/project.scss */
+.card-header {
+  color: #000; }
+
+/* line 29, black/static/sass/project.scss */
+#slider {
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  margin: 50px auto; }
+  /* line 35, black/static/sass/project.scss */
+  #slider ul {
+    list-style-type: none;
+    position: relative;
+    height: 250px;
+    width: 1400px;
+    margin: 0;
+    padding: 0;
+    margin-left: -350px; }
+  /* line 45, black/static/sass/project.scss */
+  #slider ul li {
+    height: 250px;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left; }
+  /* line 54, black/static/sass/project.scss */
+  #slider ul li p {
+    margin-left: 160px;
+    margin-top: 90px; }
+  /* line 59, black/static/sass/project.scss */
+  #slider .type1 {
+    background-color: #E3E4E5; }
+  /* line 63, black/static/sass/project.scss */
+  #slider .type2 {
+    background-color: #D1D2D5; }
+  /* line 67, black/static/sass/project.scss */
+  #slider .slideButton {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    z-index: 999;
+    background-color: #F6F7F8;
+    color: #FCC059;
+    border: 0px; }
+  /* line 77, black/static/sass/project.scss */
+  #slider #buttonleft {
+    top: 125px; }
+  /* line 81, black/static/sass/project.scss */
+  #slider #buttonright {
+    top: 125px;
+    left: 275px; }
+
+/* line 94, black/static/sass/project.scss */
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+/* line 100, black/static/sass/project.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }

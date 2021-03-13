@@ -1,0 +1,49 @@
+/* line 20, black/static/sass/project.scss */
+body {
+  background-color: #000 !important;
+  color: #fff; }
+
+@media (min-width: 1200px) {
+  /* line 26, black/static/sass/project.scss */
+  .container {
+    max-width: 1500px; } }
+
+/* line 31, black/static/sass/project.scss */
+.card-header {
+  color: #000; }
+
+/* line 36, black/static/sass/project.scss */
+.carousel {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: white; }
+  /* line 45, black/static/sass/project.scss */
+  .carousel .carousel-inner {
+    width: 350px;
+    height: 250px; }
+    /* line 49, black/static/sass/project.scss */
+    .carousel .carousel-inner .carousel-item {
+      object-fit: contain; }
+    /* line 53, black/static/sass/project.scss */
+    .carousel .carousel-inner .placement-bar {
+      position: absolute;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px 15px 35px;
+      text-align: center;
+      margin-top: 156px; }
+
+/* line 70, black/static/sass/project.scss */
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+/* line 76, black/static/sass/project.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }
