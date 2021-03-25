@@ -1,7 +1,7 @@
+import os
 from pathlib import Path
 
 import environ
-import os
 
 from .base import *  # noqa
 
@@ -84,6 +84,12 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 # DEFAULT_FILE_STORAGE = "black.utils.storages.MediaRootS3Boto3Storage"
 # MEDIA_URL = f"https://{aws_s3_domain}/media/"
 
+# MEDIA
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#media-root
+MEDIA_ROOT = str(APPS_DIR / "media")
+# https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+MEDIA_URL = "/media/"
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
@@ -184,6 +190,6 @@ LOGGING = {
 }
 
 # Your stuff...
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(APPS_DIR, 'static/')
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(APPS_DIR, "static/")
 # ------------------------------------------------------------------------------
