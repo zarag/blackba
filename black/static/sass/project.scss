@@ -22,11 +22,13 @@ body {
   color: $white;
 }
 
-@media (min-width: 1200px){
-  .container {
-    max-width: 1500px;
-  }
-}
+
+
+// @media (min-width: 1200px){
+//   .container {
+//     max-width: 1500px;
+//   }
+// }
 
 .card-header {
   color: #000;
@@ -42,50 +44,111 @@ ul.row {
   padding: unset;
 }
 
+.container {
+  max-width: fit-content !important;
 
-.carousel {
-  margin: auto;
-  margin-bottom: 50px;
-  position: relative;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+  hr {
+    border-top: 1px solid $white !important;
+  }
 
-  .carousel-inner {
-    border-radius: 10px;
-    width: 350px;
-    height: 250px;
-    color: $white;
-
-    .carousel-item {
-      object-fit: contain;
+  .coupon-detail {
+    width: 50vw;
+    .carousel {
+      .carousel-inner {
+        border-radius: 10px;
+        height: calc(100vw/4);
+        width: calc(100vw/2);
+        color: $white;
+      }
     }
-
-    .partner-details {
-      position: absolute;
-      top: 115px;
-      left: 12px;
-      width: 80px;
-      height: 60px;
-      padding: 0px;
-      border-radius: 7px;
-      background: rgb(0,0,0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
-      font-size: 10px;
-      text-align: center;
+    .title {
+      text-transform: uppercase;
     }
-
-    .placement-bar {
-      position: absolute;
-      width: 100%;
-      background: rgba(0,0,0,0.8);
-      padding: 20px 15px 35px;
-      text-align: center;
-      margin-top: 156px;
+    .description {
+      text-decoration: wavy;
+    }
+    .price {
+      font-size: large;
+      .price-before {
+        text-decoration: line-through;
+      }
+      .price-now {
+        color: $red;
+        text-shadow: #fff;
+      }
     }
   }
+
+  .carousel {
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    .carousel-inner {
+      border-radius: 10px;
+      width: 350px;
+      height: 250px;
+      color: $white;
+
+      .carousel-item {
+        object-fit: contain;
+      }
+
+      .partner-details {
+        position: absolute;
+        top: 115px;
+        left: 12px;
+        width: 80px;
+        height: 60px;
+        padding: 0px;
+        border-radius: 7px;
+        background: rgb(0,0,0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .discount {
+        position: fixed;
+        top: 38px;
+        img {
+          width: 80px;
+        }
+        span {
+          z-index: 2;
+          position: absolute;
+          font-weight: bold;
+          color: $black;
+          top:30px;
+          left: 25px;
+        }
+      }
+
+      .placement-bar {
+        position: absolute;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        padding: 30px 15px 35px;
+        text-align: center;
+        margin-top: 150px;
+        height: 100px;
+
+        .expire-in {
+          font-size: 12px;
+          color: $mint-green;
+        }
+      }
+    }
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  bottom: 50px;
 }
 ////////////////////////////////
 		//Alerts//

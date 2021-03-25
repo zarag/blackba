@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}{{ user.username }}{% endblock %}
 
+
 {% block content %}
-  <h1>{{ user.username }}</h1>
+  {% language 'hr' %}
   <form class="form-horizontal" method="post" action="{% url 'users:update' %}">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form | crispy }}
     <div class="control-group">
       <div class="controls">
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </div>
   </form>
+  <!-- <div style="font-size:12px">{{user.birthday |date:'l, d F' }}</div> -->
+  {% endlanguage %}
 {% endblock %}

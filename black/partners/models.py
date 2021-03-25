@@ -21,5 +21,5 @@ class Partner(models.Model):
     note = models.TextField(null=True, blank=True)
     date_joined = models.DateTimeField(default=timezone.now, editable=False)
     avatar = VersatileImageField(upload_to="partner-avatars", blank=True, null=True)
-    phone = PossiblePhoneNumberField(blank=True, default="")
+    phone = PossiblePhoneNumberField(blank=True, default="", region="BA")
     # objects = UserManager()

@@ -322,6 +322,7 @@ tags
 ### Project template
 
 black/media/
+black/static/
 
 .pytest_cache/
 

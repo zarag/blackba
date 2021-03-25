@@ -1,5 +1,6 @@
-{% load static i18n compress%}<!DOCTYPE html>
-<html lang="en">
+{% load static i18n compress%}
+<!DOCTYPE html>
+<html lang="bs">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -36,7 +37,10 @@
     {% block javascript %}
 
       <!-- Bootstrap JS and its dependencies-->
-      <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha384-Te3ltuYHeiA5s5F5AZJT+ypl5KHViBntHsSyFm38sNPyiMAOYCIMiegWF4UT+vxK" crossorigin="anonymous"></script>      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" integrity="sha384-SMQY6km0HNF/4ZQFLn+ksQGfOZcdUItGFzYtcFEtdC5LdIgQ74RSJNYwBRzNsHWK" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha384-Te3ltuYHeiA5s5F5AZJT+ypl5KHViBntHsSyFm38sNPyiMAOYCIMiegWF4UT+vxK" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
       <!-- Your stuff: Third-party javascript libraries go here -->
@@ -71,7 +75,7 @@
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+                <a class="nav-link" href="{% url 'users:update' %}">{% trans "My Profile" %}</a>
               </li>
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}

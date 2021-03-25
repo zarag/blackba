@@ -2,6 +2,8 @@
 
 {% load tz %}
 {% load i18n %}
+{% load mathfilters %}
+{% load humanize %}
 
 {% block content %}
   {% if coupons %}
@@ -14,18 +16,23 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="media/{{photo.image}}" alt="First slide">
             </div>
+            {% endfor %}
             <div class="partner-details">
               {{coupon.partner.first_name}}
+            </div>
+            <div class="discount">
+              <span>{{coupon.price_now|div:coupon.price_before|sub:1|mul:100|floatformat:0|intcomma}}%</span>
+              <img src="/static/images/star-small.png" alt="discount">
             </div>
             <div class="placement-bar">{{coupon.title}}
               <!-- {% autoescape off %}
               <div>{{coupon.description}}</div>
               {% endautoescape %} -->
               {% language 'bs' %}
-              <div style="font-size:12px">Kupon istice u: {{coupon.end_time |date:'l, d F H:i:s' }}</div>
+              <!-- <div style="font-size:12px">Kupon istice u: {{coupon.end_time |date:'l, d F H:i:s' }}</div> -->
               {% endlanguage %}
-            </div>
-            {% endfor %}
+              <div class="expire-in">Ponuda ističe za: <strong>{{ coupon.end_time | timeuntil }}</strong></div>
+              </div>
           </div>
           <a class="carousel-control-prev" href="#coupon-{{coupon.id}}" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
