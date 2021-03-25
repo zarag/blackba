@@ -11,6 +11,10 @@
     {% for coupon in coupons %}
       <a href="/coupons/{{coupon.id}}">
         <div id="coupon-{{coupon.id}}" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="discount">
+            <span>{{coupon.price_now|div:coupon.price_before|sub:1|mul:100|floatformat:0|intcomma}}%</span>
+            <img src="/static/images/star-small.png" alt="discount">
+          </div>
           <div class="carousel-inner">
             {% for photo in coupon.photos.all %}
             <div class="carousel-item">
@@ -19,10 +23,6 @@
             {% endfor %}
             <div class="partner-details">
               {{coupon.partner.first_name}}
-            </div>
-            <div class="discount">
-              <span>{{coupon.price_now|div:coupon.price_before|sub:1|mul:100|floatformat:0|intcomma}}%</span>
-              <img src="/static/images/star-small.png" alt="discount">
             </div>
             <div class="placement-bar">{{coupon.title}}
               <!-- {% autoescape off %}
