@@ -24,53 +24,54 @@ msgstr ""
 
 #: black/templates/account/account_inactive.html:10
 msgid "This account is inactive."
-msgstr ""
+msgstr "Ovaj račun nije aktivan."
 
 #: black/templates/account/email.html:7
 msgid "Account"
-msgstr ""
+msgstr "Korisnički račun."
 
 #: black/templates/account/email.html:10
 msgid "E-mail Addresses"
-msgstr ""
+msgstr "E-mail adrese"
 
 #: black/templates/account/email.html:13
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Sljedeće e-mail adrese pripadaju vašem računu:"
 
 #: black/templates/account/email.html:27
 msgid "Verified"
-msgstr ""
+msgstr "Verifikovano"
 
 #: black/templates/account/email.html:29
 msgid "Unverified"
-msgstr ""
+msgstr "Nije verifikovano"
 
 #: black/templates/account/email.html:31
 msgid "Primary"
-msgstr ""
+msgstr "Primarni"
 
 #: black/templates/account/email.html:37
 msgid "Make Primary"
-msgstr ""
+msgstr "Postavi kao primarni"
 
 #: black/templates/account/email.html:38
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Ponovo pošalji za verifikaciju"
 
 #: black/templates/account/email.html:39
 msgid "Remove"
-msgstr ""
+msgstr "Ukloni"
 
 #: black/templates/account/email.html:46
 msgid "Warning:"
-msgstr ""
+msgstr "Upozorenje"
 
 #: black/templates/account/email.html:46
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
-msgstr ""
+msgstr "Trenutno nemate email adresu. Preporučujemo da dodate email adresu kako"
+"biste mogli primati notifikacije, resetovati lozinku itd."
 
 #: black/templates/account/email.html:51
 msgid "Add E-mail Address"
@@ -270,44 +271,52 @@ msgstr ""
 
 #: black/templates/base.html:78
 msgid "My Profile"
-msgstr ""
+msgstr "Moj račun"
+
+#: black/templates/base.html:78
+msgid "About"
+msgstr "O nama"
+
+#: black/templates/base.html:78
+msgid "Home"
+msgstr "Početna"
 
 #: black/users/admin.py:17
 msgid "Personal info"
-msgstr ""
+msgstr "Lični podaci"
 
 #: black/users/admin.py:19
 msgid "Permissions"
-msgstr ""
+msgstr "Dozvole"
 
 #: black/users/admin.py:30
 msgid "Important dates"
-msgstr ""
+msgstr "Važni datumi"
 
 #: black/users/apps.py:7
 msgid "Users"
-msgstr ""
+msgstr "Korisnici"
 
 #: black/users/forms.py:17
 msgid "This username has already been taken."
-msgstr ""
+msgstr "Korisničko ime je zauzeto."
 
 #: black/users/models.py:17
 msgid "Male"
-msgstr ""
+msgstr "Muški"
 
 #: black/users/models.py:18
 msgid "Female"
-msgstr ""
+msgstr "Ženski"
 
 #: black/users/models.py:22
 msgid "Name of User"
-msgstr ""
+msgstr "Ime korisnika"
 
 #: black/users/models.py:24
 msgid "birthday"
-msgstr ""
+msgstr "rođendan"
 
 #: black/users/views.py:31
 msgid "Information successfully updated"
-msgstr ""
+msgstr "Podaci uspješno ažurirani."
