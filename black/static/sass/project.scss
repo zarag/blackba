@@ -102,7 +102,7 @@ ul.row {
         font-weight: bold;
         color: $black;
         top:30px;
-        left: 25px;
+        left: 22px;
       }
     }
 
@@ -171,4 +171,29 @@ ul.row {
   background-color: $pink;
   border-color: $dark-pink;
   color: $red;
+}
+
+.nav-item {
+
+  form {
+    margin-left: 10px;
+
+    input {
+      background-color: $black;
+      color: $white;
+      border-width: 0;
+      padding-top: 8px;
+    }
+    input:focus {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    form {
+      margin-left: unset;
+    }
+  }
 }

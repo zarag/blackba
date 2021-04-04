@@ -18,4 +18,18 @@
   </form>
   <!-- <div style="font-size:12px">{{user.birthday |date:'l, d F' }}</div> -->
   {% endlanguage %}
+
+  {% if object == request.user %}
+<!-- Action buttons -->
+<br>
+<div class="row">
+
+  <div class="col-sm-12">
+    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+    <!-- Your Stuff: Custom user template urls -->
+  </div>
+
+</div>
+<!-- End Action buttons -->
+{% endif %}
 {% endblock %}

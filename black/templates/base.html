@@ -91,6 +91,11 @@
                 <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
               </li>
             {% endif %}
+              <li class="nav-item">
+                <form action="{% url 'home' %}" method="get">
+                  <input name="q" type="text" placeholder="Pretraga...">
+                </form>
+              </li>
           </ul>
         </div>
       </nav>
