@@ -26,8 +26,10 @@ class User(AbstractUser):
     first_name = None  # type: ignore
     birthday = models.DateField(_("birthday"), null=True)
     last_name = None  # type: ignore
-    gender = models.CharField(max_length=2, choices=GENDER_CHOICES, null=True)
-    phone = PossiblePhoneNumberField(blank=True, default="")
+    gender = models.CharField(
+        max_length=2, choices=GENDER_CHOICES, null=True, verbose_name=_("Gender")
+    )
+    phone = PossiblePhoneNumberField(blank=True, default="", verbose_name=_("Phone"))
 
     def get_absolute_url(self):
         """Get url for user's detail view.

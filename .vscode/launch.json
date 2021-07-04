@@ -17,6 +17,7 @@
                 "runserver",
                 "--noreload"
             ],
+            "justMyCode": false
         }
     ]
 }

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "pages/home.html" %}
 
 {% load tz %}
 {% load i18n %}
@@ -6,7 +6,7 @@
 {% load humanize %}
 
 {% block content %}
-  {% if coupons %}
+{% if coupons %}
   <ul class="row">
     {% for coupon in coupons %}
       <a href="/coupons/{{coupon.id}}">
@@ -47,6 +47,7 @@
     {% endfor %}
   </ul>
   {% else %}
+  fdlgjkdf
     <p>Nemamo kupona u ponudi.</p>
   {% endif %}
 {% endblock %}

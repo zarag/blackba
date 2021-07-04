@@ -44,20 +44,35 @@ ul.row {
   padding: unset;
 }
 
-.container {
-  max-width: fit-content !important;
+#header {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  // height: 450px;
+}
+
+
+.dark {
+
+  header {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.coupon-container {
+  width: 100% !important;
 
   hr {
     border-top: 1px solid $white !important;
   }
 
   .coupon-detail {
-    width: 50vw;
+    // width: 50vw;
     .carousel {
       .carousel-inner {
         border-radius: 10px;
-        height: calc(100vw/4);
-        width: calc(100vw/2);
+        // height: 450px;
+        width: 100%;
         color: $white;
       }
     }
@@ -114,6 +129,9 @@ ul.row {
 
       .carousel-item {
         object-fit: contain;
+        img {
+          width: 100%;
+        }
       }
 
       .partner-details {

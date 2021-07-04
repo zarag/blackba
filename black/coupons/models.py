@@ -17,6 +17,7 @@ class Coupon(models.Model):
     photos = models.ManyToManyField(Image)
     price_before = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     price_now = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    top_offer = models.BooleanField(default=False, null=False)
 
     @property
     def days_left(self):

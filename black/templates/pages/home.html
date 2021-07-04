@@ -1,4 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% for coupon in top_offers %}
+{{ coupon.title }}
+{% endfor %}
 {% endblock content %}
