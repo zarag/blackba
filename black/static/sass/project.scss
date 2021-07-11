@@ -76,7 +76,7 @@ body {
   position: absolute;
   font-weight: bold;
   color: $black;
-  top:85%;
+  top:70vh;
   left: 35px;
   font-size: xx-large;
   color: $white;
@@ -88,17 +88,28 @@ body {
   }
 }
 
-.carousel-caption {
-  top: 50%;
-  text-shadow: 1px 1px $black;
-  h2,p{
-    font-weight: bold !important;
+.carousel {
+  height: inherit;
+  .carousel-inner {
+    height: inherit;
   }
-  // .lead {
-  //   color: $black;
-  //   background-color: rgba(255, 255, 255, 0.2);
-  //   border-radius: 20px;
-  // }
+  .carousel-caption {
+    bottom: 35vh;
+    text-shadow: 1px 1px $black;
+    display: table-cell;
+    vertical-align: middle;
+    h2,p{
+      font-weight: bold !important;
+    }
+    // .lead {
+    //   color: $black;
+    //   background-color: rgba(255, 255, 255, 0.2);
+    //   border-radius: 20px;
+    // }
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 20vh !important;
+  }
 }
 
 .carousel:not(:last-child) {
@@ -114,6 +125,7 @@ ul.row {
 #fourth {
   header {
     background: $blue;
+    height: 100%;
   }
 }
 
@@ -124,6 +136,7 @@ ul.row {
   header {
     position: absolute;
     width: 100%;
+    height: 100%;
     .carousel-item {
       min-height: 750px;
       background: no-repeat center center scroll;

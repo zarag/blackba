@@ -79,7 +79,7 @@
         <div class="carousel-inner" role="listbox">
           {% for coupon in coupons.top_offers %}
           <div class="carousel-item" style="background-image: url('/media/{{coupon.photos.all.0.image}}')">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               {% autoescape off %}
               <h2 class="display-4">{{ coupon.title }}</h2>
               <p class="lead">{{ coupon.short_description }}.</p>
