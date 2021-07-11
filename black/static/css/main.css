@@ -87,7 +87,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #F8F8F8;
+		background: #000;
 		font-family: 'Roboto', sans-serif;
 		font-weight: 300;
 		font-size: 17pt;
@@ -1627,11 +1627,13 @@ input, select, textarea {
 			box-shadow: inset 0 0 0 1px #e6e6e6;
 			border-radius: 100%;
 			color: #aaa;
+			background-position-x: center;
+			background-size: 100%;
 		}
-
+/*
 			ul.icons a:hover {
 				background: rgba(0, 0, 0, 0.025);
-			}
+			} */
 
 /* Menu */
 
@@ -1820,7 +1822,7 @@ input, select, textarea {
 		appearance: none;
 		display: block;
 		box-shadow: inset 0 0 0 1px #e6e6e6;
-		background: #f8f8f8;
+		background: transparent;
 		width: 100%;
 		padding: 0.85em 1em 0.85em 1em;
 		border-radius: 0.25em;
@@ -2218,7 +2220,7 @@ input, select, textarea {
 	}
 
 		.main > header {
-			background: #fff;
+			background: #3d3d3d;
 			text-align: center;
 			padding: 5em 0 5em 0;
 			margin: 0;
@@ -2262,7 +2264,7 @@ input, select, textarea {
 
 			.main > .content.style4 {
 				padding-top: 0;
-				background: #fff;
+				background: #2f394e;
 			}
 
 /* Footer */

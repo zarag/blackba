@@ -13,6 +13,7 @@ class Coupon(models.Model):
     partner = models.ForeignKey(Partner, on_delete=models.CASCADE, null=True)
     start_time = models.DateTimeField(default=timezone.now)
     end_time = models.DateTimeField(default=timezone.now)
+    short_description = models.CharField(max_length=256, blank=True)
     description = HTMLField()
     photos = models.ManyToManyField(Image)
     price_before = models.DecimalField(max_digits=10, decimal_places=2, null=True)

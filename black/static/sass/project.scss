@@ -16,10 +16,41 @@ $black: #000;
 $pink: #f2dede;
 $dark-pink: #eed3d7;
 $red: #b94a48;
+$blue: #2f394e;
 
 body {
   background-color:$black !important;
   color: $white;
+}
+
+.card {
+  background-color: transparent;
+  .card-body {
+    .card-subtitle {
+      font-size: x-small;
+      color: $white;
+      text-align: initial;
+      font-weight: bold;
+    }
+    .card-title {
+      color: $white !important;
+      overflow: hidden;
+      font-weight: bold;
+      height: calc(25vh/3);
+      margin-bottom: auto;
+      padding-top: 5%;
+      font-size: 20px;
+    }
+    .card-text {
+      color: lightgray;
+      overflow: hidden;
+      font-size: small;
+      font-weight: 400;
+      line-height: initial;
+      text-align: justify;
+      margin-top: auto;
+    }
+  }
 }
 
 
@@ -34,6 +65,42 @@ body {
   color: #000;
 }
 
+.coupon-list {
+  form {
+    margin-bottom: 50px;
+  }
+}
+
+.price {
+  z-index: 2;
+  position: absolute;
+  font-weight: bold;
+  color: $black;
+  top:85%;
+  left: 35px;
+  font-size: xx-large;
+  color: $white;
+  .price-before {
+    text-decoration: line-through;
+  }
+  .price-now {
+    text-shadow: #fff;
+  }
+}
+
+.carousel-caption {
+  top: 50%;
+  text-shadow: 1px 1px $black;
+  h2,p{
+    font-weight: bold !important;
+  }
+  // .lead {
+  //   color: $black;
+  //   background-color: rgba(255, 255, 255, 0.2);
+  //   border-radius: 20px;
+  // }
+}
+
 .carousel:not(:last-child) {
   align-self: start;
 }
@@ -44,19 +111,45 @@ ul.row {
   padding: unset;
 }
 
+#fourth {
+  header {
+    background: $blue;
+  }
+}
+
 #header {
   padding-top: 0 !important;
   padding-left: 0 !important;
-  // height: 450px;
-}
-
-
-.dark {
-
+  height: 79vh;
   header {
     position: absolute;
     width: 100%;
+    .carousel-item {
+      min-height: 750px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
   }
+}
+
+.row {
+  .card {
+    border: none;
+    img {
+      height: 250px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+}
+
+
+.row > div[class*='col-'] {
+  display: flex;
+  flex:1 0 auto;
 }
 
 .coupon-container {
@@ -67,129 +160,129 @@ ul.row {
   }
 
   .coupon-detail {
-    // width: 50vw;
-    .carousel {
-      .carousel-inner {
-        border-radius: 10px;
-        // height: 450px;
-        width: 100%;
-        color: $white;
-      }
-    }
-    .title {
-      text-transform: uppercase;
-    }
-    .description {
-      text-decoration: wavy;
-    }
-    .price {
-      font-size: large;
-      .price-before {
-        text-decoration: line-through;
-      }
-      .price-now {
-        color: $red;
-        text-shadow: #fff;
-      }
-    }
-  }
+//     // width: 50vw;
+//     .carousel {
+//       .carousel-inner {
+//         border-radius: 10px;
+//         // height: 450px;
+//         width: 100%;
+//         color: $white;
+//       }
+//     }
+//     .title {
+//       text-transform: uppercase;
+//     }
+//     .description {
+//       text-decoration: wavy;
+//     }
+//     .price {
+//       font-size: large;
+//       .price-before {
+//         text-decoration: line-through;
+//       }
+//       .price-now {
+//         color: $red;
+//         text-shadow: #fff;
+//       }
+//     }
+//   }
 
-  .carousel {
-    margin: auto;
-    margin-bottom: 50px;
-    position: relative;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+//   .carousel {
+//     margin: auto;
+//     margin-bottom: 50px;
+//     position: relative;
+//     margin-bottom: 30px;
+//     text-transform: uppercase;
 
 
-    .discount {
-      position: relative;
-      z-index: 1;
-      top: 38px;
-      img {
-        width: 80px;
-        -webkit-filter: drop-shadow(5px 5px 5px $black);
-        filter: drop-shadow(5px 5px 5px $black);
-      }
-      span {
-        z-index: 2;
-        position: absolute;
-        font-weight: bold;
-        color: $black;
-        top:30px;
-        left: 22px;
-      }
-    }
+//     .discount {
+//       position: relative;
+//       z-index: 1;
+//       top: 38px;
+//       img {
+//         width: 80px;
+//         -webkit-filter: drop-shadow(5px 5px 5px $black);
+//         filter: drop-shadow(5px 5px 5px $black);
+//       }
+//       span {
+//         z-index: 2;
+//         position: absolute;
+//         font-weight: bold;
+//         color: $black;
+//         top:30px;
+//         left: 22px;
+//       }
+//     }
 
-    .carousel-inner {
-      border-radius: 10px;
-      width: 350px;
-      height: 250px;
-      color: $white;
+//     .carousel-inner {
+//       border-radius: 10px;
+//       width: 350px;
+//       height: 250px;
+//       color: $white;
 
-      .carousel-item {
-        object-fit: contain;
-        img {
-          width: 100%;
-        }
-      }
+//       .carousel-item {
+//         object-fit: contain;
+//         img {
+//           width: 100%;
+//         }
+//       }
 
-      .partner-details {
-        position: absolute;
-        top: 115px;
-        left: 12px;
-        width: 80px;
-        height: 60px;
-        padding: 0px;
-        border-radius: 7px;
-        background: rgb(0,0,0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        font-size: 10px;
-        text-align: center;
-      }
+//       .partner-details {
+//         position: absolute;
+//         top: 115px;
+//         left: 12px;
+//         width: 80px;
+//         height: 60px;
+//         padding: 0px;
+//         border-radius: 7px;
+//         background: rgb(0,0,0);
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         z-index: 1;
+//         font-size: 10px;
+//         text-align: center;
+//       }
 
-      .placement-bar {
-        position: absolute;
-        width: 100%;
-        background: rgba(0,0,0,0.8);
-        padding: 30px 15px 35px;
-        text-align: center;
-        margin-top: 150px;
-        height: 100px;
+//       .placement-bar {
+//         position: absolute;
+//         width: 100%;
+//         background: rgba(0,0,0,0.8);
+//         padding: 30px 15px 35px;
+//         text-align: center;
+//         margin-top: 150px;
+//         height: 100px;
 
-        .expire-in {
-          font-size: 12px;
-          color: $mint-green;
-        }
-      }
-    }
-  }
-}
-
-// .carousel-control-prev, .carousel-control-next {
-//   bottom: 50px;
+//         .expire-in {
+//           font-size: 12px;
+//           color: $mint-green;
+//         }
+//       }
+//     }
+//   }
 // }
-////////////////////////////////
-		//Alerts//
-////////////////////////////////
 
-// bootstrap alert CSS, translated to the django-standard levels of
-// debug, info, success, warning, error
+// // .carousel-control-prev, .carousel-control-next {
+// //   bottom: 50px;
+// // }
+// ////////////////////////////////
+// 		//Alerts//
+// ////////////////////////////////
 
-.alert-debug {
-  background-color: $white;
-  border-color: $mint-green;
-  color: $black;
-}
+// // bootstrap alert CSS, translated to the django-standard levels of
+// // debug, info, success, warning, error
 
-.alert-error {
-  background-color: $pink;
-  border-color: $dark-pink;
-  color: $red;
-}
+// .alert-debug {
+//   background-color: $white;
+//   border-color: $mint-green;
+//   color: $black;
+// }
+
+// .alert-error {
+//   background-color: $pink;
+//   border-color: $dark-pink;
+//   color: $red;
+// }
 
 .nav-item {
 
@@ -214,4 +307,6 @@ ul.row {
       margin-left: unset;
     }
   }
+}
+}
 }
