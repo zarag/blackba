@@ -21,6 +21,23 @@ $blue: #2f394e;
 body {
   background-color:$black !important;
   color: $white;
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding-right: 30px;
+    z-index: 5;
+    top: 10px;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      outline: none;
+      border-bottom: none;
+      margin-right: 24px;
+    }
+  }
 }
 
 .card {
