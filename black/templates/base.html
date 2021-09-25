@@ -76,7 +76,7 @@
           <a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
         {% else %}
           <a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-          <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+          <a href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
         {% endif %}
       </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -86,7 +86,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-          {% for coupon in coupons.top_offers %}
+          {% for coupon in top_offers %}
           <div class="carousel-item" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/{{coupon.photos.all.0.image}}')">
             <div class="carousel-caption d-md-block">
               {% autoescape off %}

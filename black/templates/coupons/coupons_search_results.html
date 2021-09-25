@@ -1,0 +1,19 @@
+{% if coupons %}
+    {% for coupon in coupons %}
+    <div class="col-md-4 col-xs-6">
+        <div class="card">
+            <img class="card-img-top" src="/media/{{coupon.photos.all.0.image}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-subtitle">{{ coupon.partner.first_name }} | {{ coupon.end_time|date:"j.n.Y" }}</h5>
+                <h5 class="card-title">{{ coupon.title }}</h5>
+                <p class="card-text">{{ coupon.short_description }}</p>
+            </div>
+            <!-- <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div> -->
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p> Nismo pronasli razultat za vasu pretragu. </p>
+{% endif %}

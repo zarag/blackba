@@ -1,3 +1,4 @@
+from coupons.views import coupon_list_json
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -8,7 +9,7 @@ from home import views
 
 urlpatterns = [
     # path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path("", views.HomeView.as_view(), name="home"),
+    path("", coupon_list_json, name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),

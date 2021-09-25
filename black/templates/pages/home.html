@@ -2,24 +2,13 @@
 {% block content %}
 <div class="coupon-list">
     <form action="{% url 'home' %}" method="get">
-        <input name="q" type="text" placeholder="Pretraga...">
+        <input name="q" id="coupon-search-text" type="text" placeholder="Pretraga...">
     </form>
-    <div class="row">
-        {% for coupon in coupons.search_results %}
-        <div class="col-md-4 col-xs-6">
-            <div class="card">
-                <img class="card-img-top" src="/media/{{coupon.photos.all.0.image}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-subtitle">{{ coupon.partner.first_name }} | {{ coupon.end_time|date:"j.n.Y" }}</h5>
-                    <h5 class="card-title">{{ coupon.title }}</h5>
-                    <p class="card-text">{{ coupon.short_description }}</p>
-                </div>
-                <!-- <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div> -->
-            </div>
-        </div>
-        {% endfor %}
+    <!-- <input type="text" id="user-input" autofocus=""><br>
+    <button type="button" id="sender">Send data</button><br>
+    <p id="p-text">foo bar</p> -->
+    <div id="search-results" class="row">
+        {% include 'coupons/coupons_search_results.html' %}
     </div>
 </div>
 
