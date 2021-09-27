@@ -9,7 +9,7 @@ ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # black/
 APPS_DIR = ROOT_DIR / "black"
 env = environ.Env()
-env.read_env(str(APPS_DIR / ".env"))
+env.read_env(str(ROOT_DIR / ".env"))
 
 # GENERAL
 DEBUG = False
