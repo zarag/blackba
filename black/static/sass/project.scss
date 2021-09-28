@@ -113,9 +113,9 @@ body {
     height: inherit;
     .carousel-item {
       height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position-y: center;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position-y: center !important;
     }
   }
   .carousel-caption {
