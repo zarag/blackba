@@ -18,7 +18,7 @@ DJANGO_READ_DOT_ENV_FILE = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["black.ba"])
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["blackfridayonline.xyz"])
 
 # DATABASES
 # ------------------------------------------------------------------------------
