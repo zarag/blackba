@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 from django.utils.timezone import now
 from django.views import generic
 from django.views.generic import DetailView
+from django.core.paginator import Paginator
 
 from .models import Coupon
 
@@ -39,9 +40,12 @@ def coupon_list_json(request):
     ctx = {}
     user_input = request.GET.get("inputValue")
     user_input = user_input if user_input else ""
+    page = request.GET.get('page', 1)
     query_result = Coupon.objects.filter(
         Q(title__icontains=user_input), end_time__gte=now()
     ).order_by("-start_time")
+    paginator = Paginator(query_result, 10)
+    query_result = paginator.page(page)
     ctx["coupons"] = query_result
     ctx["top_offers"] = Coupon.objects.filter(Q(top_offer=True))
     if request.is_ajax():

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-02 15:19+0200\n"
+"POT-Creation-Date: 2021-10-14 15:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: black/templates/account/account_inactive.html:5
-#: black/templates/account/account_inactive.html:8
+#: black/partners/models.py:17
+msgid "Partner's first name"
+msgstr "Partnerovo ime"
+
+#: black/templates/account/account_inactive.html:3
+#: black/templates/account/account_inactive.html:6
 msgid "Account Inactive"
 msgstr ""
 
-#: black/templates/account/account_inactive.html:10
+#: black/templates/account/account_inactive.html:8
 msgid "This account is inactive."
 msgstr "Ovaj račun nije aktivan."
 
@@ -86,35 +90,35 @@ msgstr ""
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
-#: black/templates/account/email_confirm.html:6
-#: black/templates/account/email_confirm.html:10
+#: black/templates/account/email_confirm.html:4
+#: black/templates/account/email_confirm.html:8
 msgid "Confirm E-mail Address"
 msgstr ""
 
-#: black/templates/account/email_confirm.html:16
+#: black/templates/account/email_confirm.html:14
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
 
-#: black/templates/account/email_confirm.html:20
+#: black/templates/account/email_confirm.html:18
 msgid "Confirm"
 msgstr ""
 
-#: black/templates/account/email_confirm.html:27
+#: black/templates/account/email_confirm.html:25
 #, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
-#: black/templates/account/login.html:7 black/templates/account/login.html:11
-#: black/templates/account/login.html:44 black/templates/base.html:91
+#: black/templates/account/login.html:9 black/templates/account/login.html:41
+#: black/templates/base.html:79
 msgid "Sign In"
 msgstr ""
 
-#: black/templates/account/login.html:16
+#: black/templates/account/login.html:14
 #, python-format
 msgid ""
 "Please sign in with one\n"
@@ -123,27 +127,27 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 
-#: black/templates/account/login.html:26
+#: black/templates/account/login.html:24
 msgid "or"
 msgstr ""
 
-#: black/templates/account/login.html:33
+#: black/templates/account/login.html:31
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 
-#: black/templates/account/login.html:43
+#: black/templates/account/login.html:42
 msgid "Forgot Password?"
 msgstr ""
 
-#: black/templates/account/logout.html:5 black/templates/account/logout.html:8
-#: black/templates/account/logout.html:17 black/templates/base.html:82
+#: black/templates/account/logout.html:6 black/templates/account/logout.html:15
+#: black/templates/base.html:76
 msgid "Sign Out"
 msgstr ""
 
-#: black/templates/account/logout.html:10
+#: black/templates/account/logout.html:8
 msgid "Are you sure you want to sign out?"
 msgstr ""
 
@@ -211,16 +215,12 @@ msgstr ""
 msgid "Set Password"
 msgstr ""
 
-#: black/templates/account/signup.html:6
-msgid "Signup"
-msgstr ""
-
-#: black/templates/account/signup.html:9 black/templates/account/signup.html:19
-#: black/templates/base.html:87
+#: black/templates/account/signup.html:7 black/templates/account/signup.html:17
+#: black/templates/base.html:78
 msgid "Sign Up"
 msgstr ""
 
-#: black/templates/account/signup.html:11
+#: black/templates/account/signup.html:9
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
@@ -235,14 +235,14 @@ msgstr ""
 msgid "We are sorry, but the sign up is currently closed."
 msgstr ""
 
-#: black/templates/account/verification_sent.html:5
-#: black/templates/account/verification_sent.html:8
+#: black/templates/account/verification_sent.html:3
+#: black/templates/account/verification_sent.html:6
 #: black/templates/account/verified_email_required.html:5
 #: black/templates/account/verified_email_required.html:8
 msgid "Verify Your E-mail Address"
 msgstr ""
 
-#: black/templates/account/verification_sent.html:10
+#: black/templates/account/verification_sent.html:8
 msgid ""
 "We have sent an e-mail to you for verification. Follow the link provided to "
 "finalize the signup process. Please contact us if you do not receive it "
@@ -270,19 +270,11 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
-#: black/templates/base.html:70
-msgid "Home"
-msgstr "Početna"
-
-#: black/templates/base.html:73
-msgid "About"
-msgstr "O nama"
-
-#: black/templates/base.html:78
+#: black/templates/base.html:75
 msgid "My Profile"
 msgstr "Moj račun"
 
-#: black/templates/users/user_form.html:15
+#: black/templates/users/user_form.html:13
 msgid "Update"
 msgstr "Spremi"
 
@@ -322,14 +314,20 @@ msgstr "Ime korisnika"
 msgid "birthday"
 msgstr "rođendan"
 
-#: black/users/models.py:29
+#: black/users/models.py:30
 msgid "Gender"
 msgstr "Spol"
 
-#: black/users/models.py:30
+#: black/users/models.py:32
 msgid "Phone"
 msgstr "Broj telefona"
 
 #: black/users/views.py:35
 msgid "Information successfully updated"
 msgstr "Podaci uspješno ažurirani."
+
+#~ msgid "Home"
+#~ msgstr "Početna"
+
+#~ msgid "About"
+#~ msgstr "O nama"

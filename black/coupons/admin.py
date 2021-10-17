@@ -16,8 +16,8 @@ class CouponAdmin(admin.ModelAdmin):
         return form
 
     list_display = ("partner_first_name", "title")
-    search_fields = ("partner_first_name", "title")
-
+    search_fields = ("partner__first_name", "title")
+    list_filter = ('partner__first_name',)
 
 @admin.register(Image)
 class CouponImage(admin.ModelAdmin):
