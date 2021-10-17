@@ -44,6 +44,7 @@ body {
 
 .card {
   background-color: transparent;
+  width: 100%;
   .card-body {
     .card-subtitle {
       font-size: x-small;
@@ -87,6 +88,12 @@ body {
 .coupon-list {
   form {
     margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .paginator {
+    width: 100%;
   }
 }
 
@@ -344,6 +351,10 @@ ul.row {
     form {
       margin-left: unset;
     }
+  }
+
+  .paginator {
+    display: none;
   }
 }
 }
