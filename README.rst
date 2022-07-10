@@ -22,14 +22,14 @@ Getting Started
 --------------
 
 1. Install python and create python virtual environment in project root directory
-    $ python3.8 -m venv envvate
-    * Activate virtual environment
+    $ python3.8 -m venv env
+  Activate virtual environment::
     $ source env/bin/activate
-    * Deactivate anytime with 'deactivate' command
+  Deactivate anytime with 'deactivate' command
 3. Create local PostgreSQL database black
-    * Replace the host in .env file
-    Run $ python manage.py migrate
-4. Run the app with $ python manage.py runserver 0.0.0.0:8000
+  Replace the host in .env file
+    Run:: $ python manage.py migrate
+4. Run the app with:: $ python manage.py runserver 0.0.0.0:8000
 
 
 Setting Up Your Users
