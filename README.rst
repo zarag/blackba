@@ -18,8 +18,19 @@ Moved to settings_.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
-Basic Commands
+Getting Started
 --------------
+
+1. Install python and create python virtual environment in project root directory
+    $ python3.8 -m venv envvate
+    * Activate virtual environment
+    $ source env/bin/activate
+    * Deactivate anytime with 'deactivate' command
+3. Create local PostgreSQL database black
+    * Replace the host in .env file
+    Run $ python manage.py migrate
+4. Run the app with $ python manage.py runserver 0.0.0.0:8000
+
 
 Setting Up Your Users
 ^^^^^^^^^^^^^^^^^^^^^
@@ -97,7 +108,7 @@ Deployment
 ----------
 
 The following details how to deploy this application.
-
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
 
 Heroku
 ^^^^^^
@@ -105,7 +116,3 @@ Heroku
 See detailed `cookiecutter-django Heroku documentation`_.
 
 .. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
-
-
-
-
